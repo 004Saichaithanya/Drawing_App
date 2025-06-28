@@ -1,0 +1,86 @@
+/* Reset + Base Layout */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
+}
+
+/* Toolbar Styling */
+.toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  background: #222;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 2;
+}
+
+/* Inputs and Buttons */
+.toolbar input,
+.toolbar button {
+  margin: 0 12px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.25s ease;
+}
+
+/* Color Picker */
+#colorPicker {
+  height: 45px;
+  width: 60px;
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #444;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Clear Button */
+#clearBtn {
+  background: linear-gradient(135deg, #ff5252, #ff1744);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(255, 23, 68, 0.3);
+}
+
+#clearBtn:hover {
+  background: linear-gradient(135deg, #e60000, #c51162);
+  transform: scale(1.05);
+}
+
+/* Canvas Styling */
+canvas {
+  flex: 1;
+  display: block;
+  touch-action: none;
+  background: #f9f9f9;
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1),
+              0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Improvements */
+@media (max-width: 600px) {
+  .toolbar {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .toolbar input, .toolbar button {
+    margin: 8px 6px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
